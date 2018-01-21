@@ -1,0 +1,17 @@
+    	String numeroStudentiToString = this.txtFieldStudenti.getText();
+    	System.out.println("<handleSimula> numero studenti: " + numeroStudentiToString);
+    	
+    	if(numeroStudentiToString==null || "".equals(numeroStudentiToString.trim())){
+       		this.txtResult.setText("Inserire un valore nel campo numero di studenti");
+       		return;
+       	}
+    	
+    	
+    	int numeroStudenti; 
+    	try{
+    		numeroStudenti = Integer.parseInt(numeroStudentiToString);
+    		
+    	} catch( NumberFormatException nfe){
+    		this.txtResult.setText("Inserire una stringa numerica per il campo numero di studenti");
+    	}
+		
